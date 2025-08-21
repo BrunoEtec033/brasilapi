@@ -4,23 +4,25 @@ import CardTaxa from "../components/CardTaxa";
 
 export default function Tela_taxa() {
   const [taxas, setTaxas] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://brasilapi.com.br/api/taxas/v1')
       .then(res => res.json())
-      .then(data => setTaxas(data))
-      .catch(() => setTaxas([]))
-      .finally(() => setLoading(false));
+      .then(data => setTaxas(data)) 
+      .catch(() => setTaxas([])); 
   }, []);
+  
 
-  if (loading) return <ActivityIndicator size="large" color="#00f" style={{ flex: 1 }} />;
+
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {taxas.map((t, i) => <CardTaxa key={i} nome={t.nome} valor={t.valor} />)}
-    </ScrollView>
+    <View style={styles.container}>
+      {taxas.map((t, i) => (
+        <CardTaxa key={i} nome={t.nome} valor={t.valor} />
+      ))}
+    </View>
   );
+  
 }
 
 const styles = StyleSheet.create({

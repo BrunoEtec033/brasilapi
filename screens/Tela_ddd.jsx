@@ -1,6 +1,5 @@
 import { StyleSheet, View, ScrollView, Text } from 'react-native';
 import { useState } from 'react';
-import { InputDDD } from '../components/Inputs';
 import CardCidade from '../components/CardCidade';
 import * as dddService from '../services/ddd';
 

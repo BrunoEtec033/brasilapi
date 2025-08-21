@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     },
     conteiner: {
         display: 'flex',
-        backgroundColor: '#bee7e8ff',
         width: '100%',
         height: '50%',
         alignItems: 'center',

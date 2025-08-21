@@ -45,34 +45,36 @@ export const InputCNPJ = ({ onChangeText }) => {
   );
 
 }
-export const InputFeriado = ({onChangeText}) => {
-  return(
-    <View style={styles.container}>
+
+export const InputFeriado = ({ onChangeText }) => {
+  return (
+    <View>
       <TextInput
-       style={styles.input}
+        style={styles.input}
         maxLength={4}
-        placeholder="Digite o Ano"
-        keyboardType="numeric"
+        placeholder='Digite o ano'
+        keyboardType='numeric'
         onChangeText={onChangeText}
-      
-      
+
       />
-    </View >
 
 
-  );
-
-  
-}
-export const InputFipe = ({onChangeText}) =>{
-  return(
-    <View style={styles.container}>
-     <TextInput
-     placeholder='digite o tipo do veiculo ex: carros '
-     keyboardType='default'
-     onChangeText={onChangeText}/>
     </View>
   )
+}
+
+export const InputTaxa = ({ onChangeText }) => {
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.input}
+        maxLength={10}
+        placeholder="Taxa"
+        keyboardType="numeric"
+        onChangeText={onChangeText}
+      />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

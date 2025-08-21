@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { View, Text, TextInput, Button, FlatList, StyleSheet } from "react-native";
 import CardFeriado from "../components/CardFeriado";
+import {InputFeriado} from '../components/Inputs';
+
 
 export default function Tela_feriados() {
   const [ano, setAno] = useState('');
@@ -17,7 +19,7 @@ export default function Tela_feriados() {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Pesquisar Feriados</Text>
-      <TextInput
+      <InputFeriado
         style={styles.input}
         placeholder="Digite o ano"
         value={ano}
